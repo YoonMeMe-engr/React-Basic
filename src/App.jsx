@@ -1,7 +1,12 @@
 // import React from "react";
 
-import { Children, useState } from "react";
-import { TextInput } from "../components/TextInput";
+// import { Children, useState } from "react";
+import { TextInput } from "./components/TextInput";
+import { Routes, Route, Link } from "react-router-dom";
+import { Home } from "./pages/Home";
+import Navigation from "./components/Navigation";
+import { Profile } from "./pages/Profile";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 // Class Components
 // Render means JSX Code to HTML changing
@@ -146,43 +151,70 @@ import { TextInput } from "../components/TextInput";
 
 // export default App
 
+// const App = () => {
+//   const [inputs, setInputs] = useState({});
+
+//   // const [inputs, setInputs] = useState({
+//   //   username: 'Aung Gyi'
+//   // });
+
+//   // console.log(useState())
+//   // inputs က နောက်ဆုံးရရှိတဲ့ Data , setInputs က အဲ Data ကို ပြုပြင်ဖို့
+
+//   // Destructuring
+//   // const fruits = ['apple', 'orange', 'mango'];
+//   // const [a,b,c] = fruits;
+//   // console.log(a);
+
+//   const handleChange = (e) => {
+//     // const name = event.target.name;
+//     // const value = event.target.value; 
+
+//     const {name,value} = event.target;
+//     setInputs((prev) => ({...prev, [name]: value}))
+//   }
+
+//   const handleSubmit = (e) => {
+//     event.preventDefault()
+//     console.log(inputs)
+//   }
+
+//   return (
+//     <>
+//     <h1>React Form</h1>
+//     <form action="" onSubmit={handleSubmit}>
+//       {/* <input name="username" type="text" onChange={handleChange} /> */}
+//       <TextInput onChange={handleChange} name="username"></TextInput>
+//       <TextInput onChange={handleChange} name="email"></TextInput>
+//       <button>Sign Up</button>
+//     </form>
+//     </>
+//   )
+// };
+
+// export default App
+
+// React Route DOM
+
 const App = () => {
-  const [inputs, setInputs] = useState({});
-
-  // const [inputs, setInputs] = useState({
-  //   username: 'Aung Gyi'
-  // });
-
-  // console.log(useState())
-  // inputs က နောက်ဆုံးရရှိတဲ့ Data , setInputs က အဲ Data ကို ပြုပြင်ဖို့
-
-  // Destructuring
-  // const fruits = ['apple', 'orange', 'mango'];
-  // const [a,b,c] = fruits;
-  // console.log(a);
-
-  const handleChange = (e) => {
-    // const name = event.target.name;
-    // const value = event.target.value; 
-
-    const {name,value} = event.target;
-    setInputs((prev) => ({...prev, [name]: value}))
-  }
-
-  const handleSubmit = (e) => {
-    event.preventDefault()
-    console.log(inputs)
-  }
-
   return (
     <>
-    <h1>React Form</h1>
-    <form action="" onSubmit={handleSubmit}>
-      {/* <input name="username" type="text" onChange={handleChange} /> */}
-      <TextInput onChange={handleChange} name="username"></TextInput>
-      <TextInput onChange={handleChange} name="email"></TextInput>
-      <button>Sign Up</button>
-    </form>
+      <h1>Hello</h1>
+      <Navigation/>
+      <Routes>
+        <Route path="/home" element={<ProtectedRoute user={false}><Home/></ProtectedRoute> }/>
+        {/* <Route path="/user" element={<h1>User</h1>}/> */}
+
+        <Route path="user">
+          <Route index element={<h1>User</h1>}/>
+          <Route path="profile" element={<h1>Profile</h1>}/>
+          {/* <Route index element={<h1>Profile</h1>}/> */}
+          <Route path="profile/:id" element={<Profile/>} />
+          <Route path="skill" element={<h1>Skill</h1>}/>
+        </Route>
+
+        <Route path="*" element={<h1>404 Not Found</h1>}></Route>
+      </Routes>
     </>
   )
 };
