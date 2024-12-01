@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-div {
+    border: 2px solid orange;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}

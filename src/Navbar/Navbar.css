@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(46, 143, 175, 0.603);
+    color: white;
+    padding: 3px 15px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

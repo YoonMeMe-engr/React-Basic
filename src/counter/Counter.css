@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.counter-div {
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.counter-div h1 {
+    font-size: 50px;
+    color: lightblue;
+}
+
+.counter-div button {
+    padding: 10px;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: lightblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    /* width: 100px;
+    height: 100px; */
+}
