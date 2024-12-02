@@ -17,8 +17,18 @@ button {
   border-radius: 5px;
 }
 
-.fa-bars {
+.fa-bars, .fa-xmark {
   font-size: 50px;
   color: white;
   padding: 10px 15px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 50px;
+  color: lightblue;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

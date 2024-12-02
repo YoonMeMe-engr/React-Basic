@@ -16,16 +16,46 @@
 
 // export default Example
 
-import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {} from '@fortawesome/free-solid-svg-icons'
+// import React, { useState } from 'react'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+
+// const Example = () => {
+//   const [menuOpen, setMenuOpen] = useState(false);
+//   function menuOpenFunction(){
+//     setMenuOpen(!menuOpen);
+//   }
+//   return (
+//     <div>
+//       <button onClick={menuOpenFunction}>
+//         <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
+//       </button>
+//       {menuOpen && (
+//         <ul>
+//           <li>Home</li>
+//           <li>About</li>
+//           <li>Contact</li>
+//         </ul>
+//       )}
+//     </div>
+//   )
+// }
+
+// export default Example
+
+import React, { useState } from 'react'
 
 const Example = () => {
+  const [list, setList] = useState([1,2,3])
   return (
     <div>
-      <button>
-        <FontAwesomeIcon icon="fa-solid fa-bars" />
-      </button>
+      <ul>
+        {list.map((item, index) => {
+          console.log(index)
+          return <li key={index}>{item}</li>
+        })}
+      </ul>
+      <button onClick={() => (setList([...list, list.length + 1]))}>Click me</button>
     </div>
   )
 }
