@@ -10,3 +10,15 @@
   align-items: center;
   height: 100vh;
 }
+
+button {
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+}
+
+.fa-bars {
+  font-size: 50px;
+  color: white;
+  padding: 10px 15px;
+}
