@@ -43,19 +43,95 @@
 
 // export default Example
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+
+// const Example = () => {
+//   const [list, setList] = useState([1,2,3])
+//   return (
+//     <div>
+//       <ul>
+//         {list.map((item, index) => {
+//           console.log(index)
+//           return <li key={index}>{item}</li>
+//         })}
+//       </ul>
+//       <button onClick={() => (setList([...list, list.length + 1]))}>Click me</button>
+//     </div>
+//   )
+// }
+
+// export default Example
+
+// import React from 'react'
+// import { useEffect } from 'react';
+// import { useState } from 'react'
+
+// const Example = () => {
+//   const [count, setCount] = useState(0);
+//   const [colorChange, setColorChange] = useState('khaki');
+
+//   function countValue() {
+//     // setCount(count + 1);
+//     // or
+//     setCount(val=> val + 1);
+//   }
+
+//   // useEffect(()=> {
+//   //   console.log(`count value is ${count}. Color is ${colorChange}.`)
+//   // },[count, colorChange])
+//   // or
+
+//   console.log(`count value is ${count}. Color is ${colorChange}.`)
+
+//   const changeColor = () => {
+//     setColorChange(colorChange === 'khaki' ? 'lightblue' : 'khaki')
+//   }
+
+//   return (
+//     <div>
+//       <h1 style={{color: colorChange}}>{count}</h1>
+//       <button onClick={countValue}>+ 1</button>
+//       <button onClick={changeColor}>Change Color</button>
+//     </div>
+//   )
+// }
+
+// export default Example
+
+// import React from 'react'
+// import { useEffect } from 'react';
+// import { useState } from 'react'
+
+// const Example = () => {
+//   const [width, setWidth] = useState(window.innerWidth);
+
+//   useEffect(()=> {
+//     window.addEventListener("resize", changeWidth);
+//     console.log('Event listener is added.');
+//     return ()=>{
+//       window.removeEventListener("resize", changeWidth);
+//       console.log('Event listener is removed.');
+//     }
+//   },[])
+
+//   function changeWidth(){
+//     setWidth(window.innerWidth);
+//   }
+//   return (
+//     <div>
+//       <h1>{width} px</h1>
+//     </div>
+//   )
+// }
+
+// export default Example
+
+import React from 'react'
 
 const Example = () => {
-  const [list, setList] = useState([1,2,3])
   return (
     <div>
-      <ul>
-        {list.map((item, index) => {
-          console.log(index)
-          return <li key={index}>{item}</li>
-        })}
-      </ul>
-      <button onClick={() => (setList([...list, list.length + 1]))}>Click me</button>
+      
     </div>
   )
 }
